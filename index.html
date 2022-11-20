@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="Topo Japon" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="leaflet.css">
+<script type="text/javascript" src="leaflet.js"></script>
+<script type="text/javascript" src="topojapon.js"></script>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    html, body {
+        height: 100%;
+        width: 100vw;
+    }
+    #mapid {
+        height: 100%;
+        width: 100vw;
+        visibility: hidden;
+    }
+</style>
+</head>
+<body>
+    <div id="msg"></div>
+    <div id="mapid" class="mapid"></div>
+    <script type="text/javascript">
+        var map = L.map('mapid');
+        localisation();
+    </script>
+</body>
+</html>
