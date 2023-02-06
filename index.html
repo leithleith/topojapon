@@ -6,7 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<link rel="stylesheet" href="Control.FullScreen.css" />
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script src="Control.FullScreen.js"></script>
 <style>
     body {
         padding: 0;
@@ -21,7 +23,7 @@
 <body>
     <div id="map"></div>
     <script type="text/javascript">
-        var map = L.map('map').fitWorld();
+        var map = L.map('map', {fullscreenControl: true, fullscreenControlOptions: {position: 'topleft'}}).fitWorld();
         L.tileLayer('https://maps.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
             maxZoom: 18,
             attribution: '<a href="http://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>'
